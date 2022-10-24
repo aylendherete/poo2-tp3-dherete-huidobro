@@ -44,7 +44,7 @@ test("Funcion encender caso lineal",()=>{
     tablero.crearTablero();
     tablero.encender(verticeSuperior,verticeInferior);
     expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[1,1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
     expect(tablero.tablero[3,2].estadoActual()).toBe("Encendido");
 
 })
