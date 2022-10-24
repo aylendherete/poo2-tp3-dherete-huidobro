@@ -1,7 +1,7 @@
 
-
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
+
 
 test("Prueba de posicion apagada inicialmente",()=>{
     var posicion=new Posicion(0,0);
@@ -110,3 +110,5 @@ test("Cantidad encendidas",()=>{
 
     expect(tablero.cantidadEncendidas()).toBe(9)
 })
+
+

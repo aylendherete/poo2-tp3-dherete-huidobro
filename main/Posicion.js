@@ -1,4 +1,4 @@
-function Posicion(posicionx,posiciony){
+function Posicion(posiciony,posicionx){
     if(posicionx>99){
         throw new Error("No se puede crear una posicion con eje en x mayor a 99");
     }
