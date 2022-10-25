@@ -1,8 +1,7 @@
 
-const { default: expect } = require('expect');
+
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero');
-
 
 test("Prueba de posicion apagada inicialmente",()=>{
     var posicion=new Posicion(0,0);
@@ -17,7 +16,7 @@ test("Que no se puedan crear posiciones fuera del tablero",()=>{
 test("Crear tablero",()=>{
     var tablero= new Tablero();
     expect(tablero.crearTablero()).toBe("Tablero Creado");
-    expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[0][1].estadoActual()).toBe("Apagado");
 })
 
 test("Funcion encender caso cuadrado",()=>{
@@ -26,15 +25,15 @@ test("Funcion encender caso cuadrado",()=>{
     var tablero= new Tablero();
     tablero.crearTablero();
     tablero.encender(verticeSuperior,verticeInferior);
-    expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[0,1].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[0,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[1,0].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[1,1].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[2,0].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[2,1].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0][0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0][1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0][2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1][0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1][1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1][2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2][0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2][1].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2][2].estadoActual()).toBe("Encendido");
 
 })
 
@@ -44,9 +43,9 @@ test("Funcion encender caso lineal",()=>{
     var tablero= new Tablero();
     tablero.crearTablero();
     tablero.encender(verticeSuperior,verticeInferior);
-    expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[3,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1][2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2][2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[3][2].estadoActual()).toBe("Encendido");
 
 })
 
@@ -57,12 +56,12 @@ test("Apagar rectangulo",()=>{
     tablero.crearTablero();
     tablero.encender(verticeSuperior,verticeInferior);
     tablero.apagar(verticeSuperior,verticeInferior);
-    expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[0,2].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[1,1].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[1,2].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[2,2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[0][1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[0][2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1][1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1][2].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2][1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2][2].estadoActual()).toBe("Apagado");
 })
 
 test("Cambiar rectangulo de luces",()=>{
@@ -77,16 +76,16 @@ test("Cambiar rectangulo de luces",()=>{
     var verticeInf2=new Posicion(2,1);
 
     tablero.cambiar(verticeSup2,verticeInf2);
-    expect(tablero.tablero[0,0].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[1,0].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[2,0].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[0,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[1,2].estadoActual()).toBe("Encendido");
-    expect(tablero.tablero[2,2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0][0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1][0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2][0].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[0][2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[1][2].estadoActual()).toBe("Encendido");
+    expect(tablero.tablero[2][2].estadoActual()).toBe("Encendido");
 
-    expect(tablero.tablero[0,1].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[1,1].estadoActual()).toBe("Apagado");
-    expect(tablero.tablero[2,1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[0][1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[1][1].estadoActual()).toBe("Apagado");
+    expect(tablero.tablero[2][1].estadoActual()).toBe("Apagado");
 
 })
 
