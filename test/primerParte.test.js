@@ -94,10 +94,10 @@ test("Cantidad encendidas",()=>{
     var tablero= new Tablero();
     tablero.crearTablero();
     var verticeSuperior=new Posicion(0,0);
-    var verticeInferior=new Posicion(2,2);
-    tablero.encender(verticeSuperior,verticeInferior);
+    var verticeInferior=new Posicion(1,1);
+    tablero.encender(verticeSuperior,verticeSuperior);
 
-    expect(tablero.cantidadEncendidas()).toBe(9)
+    expect(tablero.cantidadEncendidas()).toBe(1);
 })
 
 

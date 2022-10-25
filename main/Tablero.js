@@ -44,17 +44,15 @@ function Tablero(){
     }
 
     this.cantidadEncendidas=function(){
-        var cont=0;
-        var i=0;
-        var j=0;
-            for(i;i<100;i++){
-                for(j;j<100;j++){
-                    if(this.tablero[i,j].estadoActual()=="Encendido"){
-                        cont=cont+1;
-                    }
-                }
+       var cont=0;
+       for(i=0;i<=99;i++){
+        for(j=0;j<=99;j++){
+            if(this.tablero[i,j].estadoActual()==="Encendido"){
+                cont=cont+1;
             }
-        return cont;
+        }
+       }
+       return cont;
     }
 
 }
