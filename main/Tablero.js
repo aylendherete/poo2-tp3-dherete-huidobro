@@ -46,11 +46,11 @@ function Tablero(){
     this.cantidadEncendidas=function(){
        var cont=0;
        for(i=0;i<=99;i++){
-        for(j=0;j<=99;j++){
-            if(this.tablero[i,j].estadoActual()==="Encendido"){
-                cont=cont+1;
+            for(j=0;j<=99;j++){
+                if(this.tablero[i,j].estadoActual()==="Encendido"){
+                    cont=cont+1;
+                }
             }
-        }
        }
        return cont;
     }
