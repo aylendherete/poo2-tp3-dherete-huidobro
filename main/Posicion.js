@@ -22,8 +22,9 @@ function Posicion(posiciony,posicionx){
     }
 
     this.apagar=function(){
-
-        this.estado=this.estado-1;
+        if(this.estado!=0){
+            this.estado=this.estado-1;
+        }
     }
 }
 
