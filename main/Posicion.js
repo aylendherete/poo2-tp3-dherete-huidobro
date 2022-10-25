@@ -16,14 +16,6 @@ function Posicion(posiciony,posicionx){
     this.cambiarEstado=function(estadoACambiar){
         this.estado=estadoACambiar;
     }
-    this.cambiarEstadoInverso=function(){
-        if(this.estado==="Encendido"){
-            this.estado="Apagado";
-        }
-        else{
-            this.estado="Encendido";
-        }
-    }
 }
 
 
