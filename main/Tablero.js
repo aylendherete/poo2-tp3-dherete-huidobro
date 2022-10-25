@@ -10,6 +10,7 @@ function Tablero(){
                 this.tablero[i,j]=new Posicion(i,j);
             }
         }
+        return "Tablero creado";
     }
     this.encender=function(verticeSuperior,verticeInferior){
         var i=verticeSuperior.posiciony;
