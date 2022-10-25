@@ -3,14 +3,12 @@ const { default: expect } = require('expect');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero.js');
 
-beforeEach(function(){
+beforeEach(() => {
     var tablero=new Tablero();
     tablero.crearTablero();
-})
+   });
 
 test("Encender",()=>{
-    var tablero=new Tablero();
-    tablero.crearTablero();
 
     expect(tablero.tablero[0,1].estadoActual()).toBe(0);
 
