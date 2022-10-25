@@ -8,18 +8,17 @@ function Posicion(posiciony,posicionx){
     this.posicionx=posicionx;
     this.posiciony=posiciony;
     this.estado=0;
-    this.getPosicionx=function(){
-        return this.posicionx;
-    }
-    this.getPosiciony=function(){
-        return this.posiciony;
-    }
+
     this.estadoActual=function(){
         return this.estado;
     }
 
     this.cambiarEstado=function(estadoACambiar){
         this.estado=estadoACambiar;
+    }
+
+    this.encender=function(){
+        this.estado=this.estado+1;
     }
 }
 

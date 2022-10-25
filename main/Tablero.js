@@ -17,7 +17,7 @@ function Tablero(){
         var j=verticeSuperior.posicionx;
         for(i;i<=verticeInferior.posiciony;i++){
             for(j;j<=verticeInferior.posicionx;j++){
-                (this.tablero[i,j]).cambiarEstado("Encendido");
+                (this.tablero[i,j]).encender();
             }
         }
     }
