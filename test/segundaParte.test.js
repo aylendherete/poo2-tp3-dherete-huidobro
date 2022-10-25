@@ -3,13 +3,9 @@ const { default: expect } = require('expect');
 const Posicion=require('../main/Posicion.js');
 const Tablero=require('../main/Tablero.js');
 
-beforeEach(() => {
+test("Encender",()=>{
     var tablero=new Tablero();
     tablero.crearTablero();
-   });
-
-test("Encender",()=>{
-
     expect(tablero.tablero[0,1].estadoActual()).toBe(0);
 
     var posicionSuperior=new Posicion(1,0);
@@ -24,6 +20,8 @@ test("Encender",()=>{
 })
 
 test("Apagar",()=>{
+    var tablero=new Tablero();
+    tablero.crearTablero();
     var posicionSuperior=new Posicion(1,0);
     var posicionInferior= new Posicion(2,2);
     tablero.encender(posicionSuperior,posicionInferior);
